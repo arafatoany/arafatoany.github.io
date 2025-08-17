@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arafat Rahman Oany | Biomedical Science PhD</title>
+  <meta name="description" content="Portfolio of Arafat Rahman Oany — Biomedical Science PhD student focusing on ferroptosis and cancer biology. Research, publications, skills, and contact." />
+  <meta name="author" content="Arafat Rahman Oany" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Arafat Rahman Oany | Biomedical Science PhD" />
+  <meta property="og:description" content="Ferroptosis, TNBC, nuclear receptors. Research, publications, teaching, and industry experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="" /> <!-- TODO: add your image URL -->
+  <meta name="theme-color" content="#0f172a" />
+  <style>
+    :root {
+      --bg: #0b1020;           /* deep slate */
+      --bg-soft: #10152a;
+      --text: #e5e7eb;         /* zinc-200 */
+      --muted: #a1a1aa;        /* zinc-400 */
+      --brand: #60a5fa;        /* sky-400 */
+      --brand-2: #34d399;      /* emerald-400 */
+      --card: #0f172a;         /* slate-900 */
+      --card-border: rgba(255,255,255,0.08);
+      --maxw: 1080px;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1100px 600px at 10% -10%, rgba(96,165,250,0.25), transparent),
+                  radial-gradient(900px 500px at 110% 10%, rgba(52,211,153,0.18), transparent),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+    header {
+      position: sticky; top: 0; z-index: 40;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(11,16,32,0.8), rgba(11,16,32,0.4));
+      border-bottom: 1px solid var(--card-border);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: 0.3px; }
+    .brand-logo { width: 28px; height: 28px; border-radius: 8px; display: inline-grid; place-items: center; background: linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow: var(--shadow); }
+    .brand-logo span { font-size: 18px; color: #0b1020; font-weight: 900; }
+    .menu { display: flex; gap: 18px; align-items: center; }
+    .menu a { color: var(--text); opacity: 0.9; font-weight: 500; }
+    .menu a:hover { opacity: 1; }
+    .hamburger { display: none; background: transparent; color: var(--text); border: none; font-size: 24px; }
+
+    .hero { padding: 72px 0 36px; }
+    .hero-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 36px; align-items: center; }
+    .kicker { color: var(--brand-2); font-weight: 700; text-transform: uppercase; letter-spacing: 1.4px; font-size: 12px; }
+    h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.1; margin: 10px 0 16px; }
+    .lead { color: var(--muted); font-size: 18px; }
+    .cta { margin-top: 22px; display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 999px; font-weight: 700; border: 1px solid var(--card-border); background: #0f172a; color: var(--text); }
+    .btn.primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #0b1020; border-color: transparent; }
+    .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow); text-decoration: none; }
+
+    .card-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+    .card { grid-column: span 6; background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+    .card h3 { margin: 0 0 8px; font-size: 18px; letter-spacing: 0.2px; }
+    .card p { margin: 0; color: var(--muted); }
+
+    .section { padding: 32px 0; }
+    .section h2 { font-size: clamp(22px, 3.2vw, 32px); margin: 0 0 16px; }
+    .section .muted { color: var(--muted); }
+
+    .timeline { display: grid; gap: 14px; }
+    .timeline-item { background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius); padding: 16px; }
+    .timeline-item h4 { margin: 0 0 6px; }
+    .timeline-item small { color: var(--muted); }
+
+    .list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+    .pill { display: inline-block; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--card-border); background: #0c142e; color: var(--text); }
+
+    footer { margin-top: 36px; padding: 24px 0 40px; color: var(--muted); border-top: 1px solid var(--card-border); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .card { grid-column: span 12; }
+      .menu { display: none; }
+      .menu.open { display: flex; flex-direction: column; background: var(--bg-soft); position: absolute; top: 58px; left: 0; right: 0; padding: 16px 20px; border-bottom: 1px solid var(--card-border); }
+      .hamburger { display: inline-block; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true"><span>AO</span></div>
+        <a href="#top" class="brand-text">Arafat Rahman Oany</a>
+      </div>
+      <nav>
+        <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+        <div id="menu" class="menu">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero-grid">
+        <div>
+          <div class="kicker">Biomedical Science · Cancer Biology</div>
+          <h1>Hi, I’m Arafat — PhD student researching ferroptosis & therapeutic strategies for TNBC.</h1>
+          <p class="lead">I study regulated cell death mechanisms (ferroptosis) and nuclear receptors to uncover selective anti-cancer vulnerabilities. I enjoy bridging academic research with clinical and industry applications.</p>
+          <div class="cta">
+            <a class="btn primary" href="#research">View Research</a>
+            <a class="btn" href="#publications">Latest Publications</a>
+            <a class="btn" href="#contact">Get in Touch</a>
+          </div>
+        </div>
+        <div class="card-grid">
+          <article class="card" aria-label="Current focus">
+            <h3>Current Focus</h3>
+            <p>Ferroptosis in triple-negative breast cancer (TNBC): targeting CD71/TFRC, SP1, GPX4, and SLC7A11; leveraging C‑DIM ligands of NR4A1/2.</p>
+          </article>
+          <article class="card" aria-label="Affiliation">
+            <h3>Affiliation</h3>
+            <p>PhD, Biomedical Sciences — Dept. of Veterinary Physiology & Pharmacology, Texas A&M University. Advisor: Prof. Stephen Safe.</p>
+          </article>
+          <article class="card" aria-label="Industry background">
+            <h3>Industry Background</h3>
+            <p>5+ years in pharmaceutical Quality Control (method validation, SOPs, calibration, GMP compliance) at Aristopharma Ltd., Bangladesh.</p>
+          </article>
+          <article class="card" aria-label="Teaching & goals">
+            <h3>Teaching & Goals</h3>
+            <p>Passionate about teaching modern molecular biology; committed to translational oncology and personalized medicine.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section container">
+      <h2>About</h2>
+      <p class="muted">Biotech graduate with academic and industry experience in cancer biology, microbiology, and analytical QA/QC. Skilled in cell culture, molecular techniques (PCR/qPCR, Western blot), and data analysis.</p>
+      <ul class="list" style="margin-top:10px">
+        <li>MS thesis: Shigella <em>flexneri</em>–specific bacteriophages (icddr,b, Bangladesh).</li>
+        <li>Research rotations: NR4A1/2 & TWIST1 in glioblastoma; ferroptosis in TNBC.</li>
+        <li>Interests: photography, hiking, traveling, learning new cultures, mentoring.</li>
+      </ul>
+    </section>
+
+    <!-- Research -->
+    <section id="research" class="section container">
+      <h2>Research Highlights</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Targeting ferroptosis in TNBC via CD71 (TFRC) and SP1</h4>
+          <small>2024–present · Texas A&M University</small>
+          <p>Defining how iron uptake and transcriptional control sensitize TNBC cells to ferroptosis; exploring GPX4 inhibition and SLC7A11 modulation.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>DIM-3,5 (C‑DIMs) as dual NR4A1/2 inverse agonists</h4>
+          <small>2024–present</small>
+          <p>Testing whether C‑DIMs suppress oncogenic pathways and enhance ferroptotic death in TNBC cells and PDX organoid models.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>NR4A1/NR4A2 & TWIST1 in glioblastoma</h4>
+          <small>2024</small>
+          <p>Investigated regulatory crosstalk driving survival, migration, and therapy resistance in GBM models.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="section container">
+      <h2>Publications & Manuscripts</h2>
+      <p class="muted">A selection; add links to DOI/PMID or preprints.</p>
+      <ul class="list">
+        <li><strong>First‑author manuscript submitted</strong> — TNBC ferroptosis targeting via CD71/SP1 axis. <em>(Under review)</em></li>
+        <li>Two additional manuscripts <em>under review</em> (oncology / molecular biology).</li>
+        <li>Peer‑reviewing experience for top‑tier journals.</li>
+        <!-- TODO: Replace items above with your actual citations, DOIs, and links. -->
+      </ul>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section container">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Graduate Researcher, Texas A&M University</h4>
+          <small>2024–present · College Station, TX</small>
+          <p>Ferroptosis in TNBC; assay development; molecular cloning; qPCR/Western; cell‑based phenotyping; data visualization.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Senior Executive / Officer, Quality Control — Aristopharma Ltd.</h4>
+          <small>2016–2022 · Dhaka, Bangladesh</small>
+          <p>Led method validation, SOPs, instrument calibration, vendor audits, and GMP documentation; trained analysts; root‑cause investigations.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Research Associate, icddr,b (Enteric & Food Microbiology)</h4>
+          <small>2015–2016 · Dhaka, Bangladesh</small>
+          <p>Isolated and characterized <em>Shigella flexneri</em> bacteriophages; PFGE, RFLP, ELISA, PCR workflows and reporting.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <ul class="list">
+        <li>
+          <span class="pill">Cell culture</span>
+          <span class="pill">qPCR / PCR</span>
+          <span class="pill">Western blot</span>
+          <span class="pill">CRISPR basics</span>
+          <span class="pill">Flow cytometry</span>
+          <span class="pill">Organoids (PDxO)</span>
+          <span class="pill">Microscopy</span>
+        </li>
+        <li>
+          <span class="pill">Ferroptosis assays</span>
+          <span class="pill">GPX4 / SLC7A11</span>
+          <span class="pill">NR4A1/NR4A2</span>
+          <span class="pill">Transcriptional regulation (SP1)</span>
+        </li>
+        <li>
+          <span class="pill">GMP / QC</span>
+          <span class="pill">Method validation</span>
+          <span class="pill">SOPs & documentation</span>
+          <span class="pill">Instrument calibration</span>
+        </li>
+        <li>
+          <span class="pill">Python (analysis)</span>
+          <span class="pill">R (basics)</span>
+          <span class="pill">GraphPad Prism</span>
+          <span class="pill">ImageJ</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <div class="card" style="padding: 24px">
+        <p><strong>Email:</strong> <a id="email" href="#">[email protected]</a></p>
+        <p><strong>Location:</strong> College Station, Texas, USA</p>
+        <p>
+          <strong>Links:</strong>
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> ·
+          <a href="#" target="_blank" rel="noopener">Google Scholar</a> ·
+          <a href="#" target="_blank" rel="noopener">ORCID</a> ·
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+        <p class="muted">Tip: Replace placeholder links with your real profiles. You can also add a PDF CV to this repo and link it here.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> Arafat Rahman Oany. Built with vanilla HTML/CSS. Hosted on GitHub Pages.</small>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    function toggleMenu(){
+      const m = document.getElementById('menu');
+      m.classList.toggle('open');
+    }
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Email obfuscation (edit username/domain below)
+    const user = 'arafat';      // TODO: your email username
+    const domain = 'example.com'; // TODO: your domain
+    const email = `${user}@${domain}`;
+    const e = document.getElementById('email');
+    e.href = `mailto:${email}`;
+    e.textContent = email;
+  </script>
+</body>
+</html>
